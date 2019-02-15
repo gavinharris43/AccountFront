@@ -14,9 +14,9 @@ class HomePage extends Component {
     return (
 
       <div>
-       <header><h1>Account Prize App</h1></header> <br/> <br/>
+       <header><h1>Trainee Feedback App</h1></header> <br/> <br/>
 
-            Welcome to the Account Prize App, Register yourself for a chance to win some MONAAAYYYY!!!
+            Welcome to the Trainee Feedback App, Register yourself for a chance to win some MONAAAYYYY!!!
 
             <br/> <br/><br/> <br/>
             <Button bsStyle = "primary" onClick = {this.registerAccountPageLoad}>Register</Button>

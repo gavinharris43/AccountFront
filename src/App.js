@@ -21,14 +21,20 @@ class App extends Component {
   handleClick = () => {
     var firstName = document.getElementById("firstName").value;
     var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var name = document.getElementById("name").value;
 
-    if(firstName.trim()===""||lastName.trim()===""){
+    if(firstName.trim()===""||lastName.trim()==="" || email.trim()===""||password.trim()==="" || name.trim()===""){
     alert("invalid input");
     }else{
       axios.post(BaseURL+PathToCreateAccount,
 		{
 			firstName: firstName,
-			lastName: lastName
+      lastName: lastName,
+      email: email,
+      password: password,
+      cohort:{name:name}
 		}).then( (response) => {
       this.setState({
 				accNum: response.data.accountNumber,
